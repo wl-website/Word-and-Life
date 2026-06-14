@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Word & Life Empowerment Ministry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+  <div class="nw">
+    <div class="logo" onclick="location.href='index.html'">
+      <img src="images/logo.jpg" alt="Logo" class="logo-img" onerror="this.src='https://placehold.co/36x36?text=W'">
+      <div class="lt">
+        <div class="n">Word &amp; Life Ministry</div>
+        <div class="s">Empowering Children &amp; Youth</div>
+      </div>
+    </div>
+    <ul class="nl">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nr">
+      <button class="dn" onclick="openD()">Donate</button>
+      <button class="hb" onclick="toggleM()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mm" id="mm">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="training.html">Training</a>
+    <a href="impact.html">Impact</a>
+    <a href="newsletter.html">Newsletter</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="openD();toggleM()" style="color:var(--G2)">Donate</a>
+  </div>
+</nav>
+
+<button class="wa" onclick="window.open('https://wa.me/265999089074','_blank')">💬</button>
+
+<!-- HERO SECTION -->
+<section class="hero" style="background-image: linear-gradient(150deg, rgba(12,52,96,0.85) 0%, rgba(9,36,62,0.9) 55%, rgba(21,50,96,0.88) 100%), url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+  <div class="hbg">✟</div>
+  <div class="hi">
+    <div class="chip w">Christian Ministry · Malawi</div>
+    <h1>Transforming Children<em>&amp; Youth Through God's Word</em></h1>
+    <p class="hs">Reaching vulnerable children through mentorship, Biblical teaching, trauma healing, and life skills.</p>
+    <div class="hb2">
+      <button class="btn bG" onclick="location.href='programs.html'">Join Our Mission</button>
+      <button class="btn bOw" onclick="location.href='contact.html'">Volunteer</button>
+      <button class="btn bOw" onclick="location.href='contact.html'">Contact Us</button>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="sn">500+</div><div class="sl">Children Reached</div></div>
+      <div class="stat"><div class="sn">120+</div><div class="sl">Teachers Trained</div></div>
+      <div class="stat"><div class="sn">30+</div><div class="sl">Communities</div></div>
+      <div class="stat"><div class="sn">45+</div><div class="sl">Bible Groups</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="sec bg2">
+  <div class="w">
+    <div class="g2" style="align-items:center;gap:3rem">
+      <div class="rv">
+        <img src="images/about-church.jpg" alt="Church and community" class="about-img" onerror="this.src='https://placehold.co/500x400?text=Church+Image'">
+      </div>
+      <div class="rv d2">
+        <div class="chip">Who We Are</div>
+        <h2 class="h2">A Ministry Built on <b>Faith &amp; Purpose</b></h2>
+        <div class="ln"></div>
+        <p class="p">Word &amp; Life Empowerment Ministry transforms children and youth through mentorship, Biblical teaching, trauma healing, and life skills development across communities in Malawi.</p>
+        <div class="vg">
+          <div class="vc"><div class="vd"></div><span>Faith</span></div>
+          <div class="vc"><div class="vd"></div><span>Compassion</span></div>
+          <div class="vc"><div class="vd"></div><span>Service</span></div>
+          <div class="vc"><div class="vd"></div><span>Integrity</span></div>
+          <div class="vc"><div class="vd"></div><span>Empowerment</span></div>
+          <div class="vc"><div class="vd"></div><span>Leadership</span></div>
+        </div>
+        <div style="margin-top:1.25rem"><button class="btn bB" onclick="location.href='about.html'">Learn More</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT NUMBERS -->
+<section class="sec bgB">
+  <div class="w">
+    <div class="g4 rv">
+      <div class="ib"><div class="in">500+</div><div class="il">Children Reached</div></div>
+      <div class="ib"><div class="in">120+</div><div class="il">Teachers Trained</div></div>
+      <div class="ib"><div class="in">30+</div><div class="il">Communities</div></div>
+      <div class="ib"><div class="in">45+</div><div class="il">Bible Study Groups</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec">
+  <div class="w">
+    <div class="tc rv" style="margin-bottom:2rem">
+      <div class="chip">Testimonies</div>
+      <h2 class="h2">Lives <b>Transformed</b></h2>
+      <div class="ln c"></div>
+    </div>
+    <div class="g3">
+      <div class="card tc2 rv d1">
+        <div class="tq">"</div>
+        <p>This ministry changed my life. Through mentorship I found purpose and became a confident youth leader in my church.</p>
+        <div class="tn">Chisomo Banda</div><div class="tr">Youth Graduate, Lilongwe</div>
+      </div>
+      <div class="card tc2 rv d2">
+        <div class="tq">"</div>
+        <p>The teacher training transformed how I teach. Children who never listened now eagerly learn and memorize Scripture!</p>
+        <div class="tn">Mary Phiri</div><div class="tr">Sunday School Teacher, Kasungu</div>
+      </div>
+      <div class="card tc2 rv d3">
+        <div class="tq">"</div>
+        <p>The trauma healing program helped our children deeply. Today they are joyful and hopeful. We thank God.</p>
+        <div class="tn">Pastor James Mwale</div><div class="tr">Community Leader, Mchinji</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<div class="ss">
+  <h2>Stay Connected</h2>
+  <p>Receive monthly newsletters and ministry updates.</p>
+  <div class="sf">
+    <input type="email" id="sub1" placeholder="Your email address">
+    <button class="btn bG" onclick="doSub('sub1')">Subscribe</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="w">
+    <div class="fg3">
+      <div class="ff">
+        <div class="logo">
+          <img src="images/logo.jpg" alt="Logo" class="logo-img-small" onerror="this.src='https://placehold.co/36x36?text=W'">
+          <div class="lt"><div class="n">Word &amp; Life Ministry</div><div class="s">Empowering Children &amp; Youth</div></div>
+        </div>
+        <p>A Christian ministry transforming children and youth in Malawi through mentorship, Biblical teaching, trauma healing, and life skills.</p>
+        <div class="soc">
+          <button class="sb3" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.55);width:32px;height:32px">f</button>
+          <button class="sb3" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.55);width:32px;height:32px">𝕏</button>
+          <button class="sb3" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.55);width:32px;height:32px" onclick="window.open('https://wa.me/265999089074','_blank')">💬</button>
+        </div>
+      </div>
+      <div class="fc">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html">Youth Mentorship</a></li>
+          <li><a href="programs.html">Teacher Training</a></li>
+          <li><a href="programs.html">Bible Study</a></li>
+          <li><a href="programs.html">Trauma Healing</a></li>
+          <li><a href="programs.html">Life Skills</a></li>
+        </ul>
+      </div>
+      <div class="fc fnl">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.78rem;margin-bottom:0.75rem;opacity:0.55">Get monthly updates in your inbox.</p>
+        <input type="email" id="sub2" placeholder="Your email">
+        <button class="btn bG" style="width:100%;justify-content:center;font-size:0.78rem" onclick="doSub('sub2')">Subscribe</button>
+        <div style="margin-top:1rem;font-size:0.77rem;opacity:0.48;line-height:1.9">
+          <div>📞 <a href="tel:+265999089074" style="color:inherit">+265 999 089 074</a></div>
+          <div>✉️ <a href="mailto:masilikali@gmail.com" style="color:inherit">masilikali@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="bv">"Train up a child in the way he should go, and when he is old he will not depart from it."<cite>— Proverbs 22:6</cite></div>
+    <hr class="fd">
+    <div class="fb4">
+      <p>© 2025 Word &amp; Life Empowerment Ministry. All rights reserved.</p>
+      <p>Made for God's Kingdom · Lilongwe, Malawi</p>
+    </div>
+  </div>
+</footer>
+
+<!-- DONATE MODAL -->
+<div class="mb" id="dm">
+  <div class="md">
+    <button class="mc" onclick="document.getElementById('dm').classList.remove('on')">✕</button>
+    <div style="text-align:center;margin-bottom:1.25rem">
+      <div style="font-size:2rem;margin-bottom:0.3rem">🙏</div>
+      <h2 style="color:var(--B);font-size:1.3rem;margin-bottom:0.25rem">Support the Ministry</h2>
+      <p style="color:var(--M);font-size:0.82rem">Empowering children through God's Word</p>
+    </div>
+    <div class="ag">
+      <button class="am" onclick="selA(this)">MWK 500</button>
+      <button class="am sel" onclick="selA(this)">MWK 1,000</button>
+      <button class="am" onclick="selA(this)">MWK 2,500</button>
+      <button class="am" onclick="selA(this)">MWK 5,000</button>
+      <button class="am" onclick="selA(this)">MWK 10,000</button>
+      <button class="am" onclick="selA(this)">Custom</button>
+    </div>
+    <div class="fg"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+    <div class="fg"><label>Phone / M-Pesa</label><input type="tel" placeholder="+265 ..."></div>
+    <button class="btn bB" style="width:100%;justify-content:center" onclick="document.getElementById('dm').classList.remove('on');alert('Thank you! 🙏\nContact Pastor Paul to complete:\n+265 999 089 074\n\nGod bless you!')">Donate Now</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
