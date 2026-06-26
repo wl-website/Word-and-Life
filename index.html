@@ -9,7 +9,7 @@
   <style>
     /* Carousel Styles */
     .carousel-section {
-      padding: 3rem 0 4rem;
+      padding: 2rem 0 2rem; /* REDUCED padding */
       background: var(--OFF);
     }
     
@@ -131,6 +131,104 @@
       right: 1rem;
     }
     
+    /* REDUCED section padding */
+    .sec {
+      padding: 2.5rem 0 !important; /* REDUCED from 4rem */
+    }
+    
+    .sec.bg2 {
+      padding: 2.5rem 0 !important;
+    }
+    
+    .sec.bgB {
+      padding: 2rem 0 !important; /* REDUCED impact section */
+    }
+    
+    /* Impact section with title */
+    .impact-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .impact-title .chip {
+      margin-bottom: 0.3rem;
+    }
+    
+    .impact-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      color: #fff;
+      margin-bottom: 0.3rem;
+    }
+    
+    .impact-title .ln {
+      margin: 0 auto 0.5rem;
+    }
+    
+    .impact-title p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.9rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    /* Hero with overlay image */
+    .hero {
+      min-height: 86vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 5rem 1.5rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(150deg, rgba(12,52,96,0.75) 0%, rgba(9,36,62,0.8) 55%, rgba(21,50,96,0.75) 100%);
+      z-index: 0;
+    }
+    
+    .hero .hero-overlay-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .hi {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hbg {
+      position: absolute;
+      right: -2%;
+      bottom: -10%;
+      font-size: 24rem;
+      color: rgba(255, 255, 255, 0.025);
+      pointer-events: none;
+      font-family: serif;
+      line-height: 1;
+      z-index: 0;
+    }
+    
+    /* ABOUT section - reduced gap */
+    .g2 {
+      gap: 2rem !important; /* REDUCED from 3rem */
+    }
+    
     /* Responsive */
     @media (max-width: 768px) {
       .carousel-slides {
@@ -159,6 +257,10 @@
       .carousel-dot {
         width: 10px;
         height: 10px;
+      }
+      .hero .hero-overlay-image {
+        width: 100%;
+        opacity: 0.15;
       }
     }
     
@@ -211,9 +313,12 @@
 
 <button class="wa" onclick="window.open('https://wa.me/265999089074','_blank')">💬</button>
 
-<!-- HERO SECTION -->
-<section class="hero" style="background-image: linear-gradient(150deg, rgba(12,52,96,0.85) 0%, rgba(9,36,62,0.9) 55%, rgba(21,50,96,0.88) 100%), url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+<!-- HERO SECTION with Children Image Overlay -->
+<section class="hero" style="background-image: url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
   <div class="hbg">✟</div>
+  <!-- Children image overlay in background -->
+  <img src="images/crowd-children.jpeg" alt="Children" class="hero-overlay-image" onerror="this.style.display='none'">
+  
   <div class="hi">
     <div class="chip w">Christian Ministry · Malawi</div>
     <h1>Transforming Children<em>&amp; Youth Through God's Word</em></h1>
@@ -232,7 +337,7 @@
   </div>
 </section>
 
-<!-- ====== NEW IMAGE CAROUSEL SECTION ====== -->
+<!-- CAROUSEL SECTION -->
 <section class="carousel-section">
   <div class="w">
     <div class="tc rv" style="margin-bottom:1.5rem">
@@ -243,7 +348,6 @@
     
     <div class="carousel-container rv">
       <div class="carousel-slides" id="carouselSlides">
-        <!-- Slide 1: Crowd of Children (Primary image you requested) -->
         <div class="carousel-slide">
           <img src="images/crowd-children.jpeg" alt="Crowd of children in ministry" onerror="this.src='https://placehold.co/1100x450/0C3460/FFFFFF?text=Crowd+of+Children'">
           <div class="slide-caption">
@@ -251,8 +355,6 @@
             <p>Hundreds of children gather to learn about God's Word through our ministry programs.</p>
           </div>
         </div>
-        
-        <!-- Slide 2: Training Session -->
         <div class="carousel-slide">
           <img src="images/training-session.jpeg" alt="Teacher training session" onerror="this.src='https://placehold.co/1100x450/1A5276/FFFFFF?text=Teacher+Training'">
           <div class="slide-caption">
@@ -260,8 +362,6 @@
             <p>Training teachers with child-centered methods and participatory learning.</p>
           </div>
         </div>
-        
-        <!-- Slide 3: Children Ministry -->
         <div class="carousel-slide">
           <img src="images/children-ministry.jpeg" alt="Children in ministry" onerror="this.src='https://placehold.co/1100x450/2E86C1/FFFFFF?text=Children+Ministry'">
           <div class="slide-caption">
@@ -269,8 +369,6 @@
             <p>Children experiencing the love of Christ through interactive Bible lessons.</p>
           </div>
         </div>
-        
-        <!-- Slide 4: Outreach Event -->
         <div class="carousel-slide">
           <img src="images/outreach-event.jpeg" alt="Community outreach" onerror="this.src='https://placehold.co/1100x450/1B6B3A/FFFFFF?text=Community+Outreach'">
           <div class="slide-caption">
@@ -278,8 +376,6 @@
             <p>Taking God's love beyond the church walls into local communities.</p>
           </div>
         </div>
-        
-        <!-- Slide 5: Bible Study -->
         <div class="carousel-slide">
           <img src="images/bible-study.jpeg" alt="Bible study group" onerror="this.src='https://placehold.co/1100x450/09243E/FFFFFF?text=Bible+Study'">
           <div class="slide-caption">
@@ -289,11 +385,8 @@
         </div>
       </div>
       
-      <!-- Navigation Arrows -->
       <button class="carousel-arrow prev" onclick="changeSlide(-1)">‹</button>
       <button class="carousel-arrow next" onclick="changeSlide(1)">›</button>
-      
-      <!-- Dots -->
       <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </div>
@@ -302,8 +395,7 @@
 <!-- ABOUT PREVIEW -->
 <section class="sec bg2">
   <div class="w">
-    <div class="g2" style="align-items:center;gap:3rem">
-      <!-- LEFT COLUMN: Text Content -->
+    <div class="g2" style="align-items:center;gap:2rem;">
       <div class="rv d2">
         <div class="chip">Who We Are</div>
         <h2 class="h2">A Ministry Built on <b>Faith &amp; Purpose</b></h2>
@@ -319,18 +411,22 @@
         </div>
         <div style="margin-top:1.25rem"><button class="btn bB" onclick="location.href='about.html'">Learn More</button></div>
       </div>
-      
-      <!-- RIGHT COLUMN: Image -->
       <div class="rv">
-        <img src="images/about-church.jpeg" alt="Church and community" class="about-img" onerror="this.src='https://placehold.co/500x400?text=Church+Image'">
+        <img src="images/about-church.jpeg" alt="Church and community" class="about-img" style="width:100%; max-width:500px; height:auto; border-radius:var(--R); object-fit:cover; box-shadow:0 8px 28px rgba(12,52,96,0.15); display:block;" onerror="this.src='https://placehold.co/500x400/0C3460/FFFFFF?text=Church+Image'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT NUMBERS -->
+<!-- IMPACT NUMBERS - WITH TITLE NOW -->
 <section class="sec bgB">
   <div class="w">
+    <div class="impact-title rv">
+      <div class="chip w">Our Impact</div>
+      <h2>Transforming Lives <b style="color:var(--G2);">Across Malawi</b></h2>
+      <div class="ln" style="background:var(--G2); margin:0 auto 0.5rem;"></div>
+      <p>By God's grace, we are reaching communities and equipping leaders for lasting change.</p>
+    </div>
     <div class="g4 rv">
       <div class="ib"><div class="in">2000+</div><div class="il">Children Reached</div></div>
       <div class="ib"><div class="in">250+</div><div class="il">Pastors Trained</div></div>
@@ -343,7 +439,7 @@
 <!-- TESTIMONIALS -->
 <section class="sec">
   <div class="w">
-    <div class="tc rv" style="margin-bottom:2rem">
+    <div class="tc rv" style="margin-bottom:1.5rem">
       <div class="chip">Testimonies</div>
       <h2 class="h2">Lives <b>Transformed</b></h2>
       <div class="ln c"></div>
@@ -352,12 +448,12 @@
       <div class="card tc2 rv d1">
         <div class="tq">"</div>
         <p>This ministry changed my life. Through mentorship I found purpose and became a confident youth leader in my church.</p>
-        <div class="tn">Hopeson Masilikali</div><div class="tr">Youth , Nazombe Village</div>
+        <div class="tn">Hopeson Masilikali</div><div class="tr">Youth, Nazombe Village</div>
       </div>
       <div class="card tc2 rv d2">
         <div class="tq">"</div>
         <p>The teacher training transformed how I teach. Children who never listened now eagerly learn and memorize Scripture!</p>
-        <div class="tn">Brother Ellius</div><div class="tr">Sunday School Teacher, Blantre</div>
+        <div class="tn">Brother Ellius</div><div class="tr">Sunday School Teacher, Blantyre</div>
       </div>
       <div class="card tc2 rv d3">
         <div class="tq">"</div>
@@ -468,7 +564,6 @@
   const dotsContainer = document.getElementById('carouselDots');
   const totalSlides = slides.length;
   
-  // Create dots
   function createDots() {
     dotsContainer.innerHTML = '';
     for (let i = 0; i < totalSlides; i++) {
@@ -482,7 +577,6 @@
     }
   }
   
-  // Go to specific slide
   function goToSlide(index) {
     if (index < 0) index = totalSlides - 1;
     if (index >= totalSlides) index = 0;
@@ -491,33 +585,28 @@
     const slidesContainer = document.getElementById('carouselSlides');
     slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
     
-    // Update dots
     document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
       dot.classList.toggle('active', i === currentSlide);
     });
   }
   
-  // Change slide by direction
   function changeSlide(direction) {
     goToSlide(currentSlide + direction);
     resetInterval();
   }
   
-  // Reset autoplay interval
   function resetInterval() {
     clearInterval(slideInterval);
     slideInterval = setInterval(() => {
       goToSlide(currentSlide + 1);
-    }, 4000); // Change slide every 4 seconds
+    }, 4000);
   }
   
-  // Initialize
   function initCarousel() {
     createDots();
     goToSlide(0);
     resetInterval();
     
-    // Pause on hover
     const container = document.querySelector('.carousel-container');
     container.addEventListener('mouseenter', () => {
       clearInterval(slideInterval);
@@ -527,10 +616,8 @@
     });
   }
   
-  // Start carousel when page loads
   document.addEventListener('DOMContentLoaded', initCarousel);
   
-  // Also initialize if DOM already loaded
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
     initCarousel();
   }
