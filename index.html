@@ -149,7 +149,7 @@
       z-index: 0;
     }
     
-    /* Dark overlay for contrast - MUCH DARKER now */
+    /* Dark overlay for contrast */
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -161,15 +161,14 @@
       z-index: 1;
     }
     
-    /* Children image overlay - positioned to cover full height */
+    /* ===== FIXED: Children image overlay with 'contain' ===== */
     .hero-children-overlay {
       position: absolute;
-      right: 0;
-      top: 0;
+      inset: 0;
+      width: 100%;
       height: 100%;
-      width: 50%;
-      object-fit: cover;
-      opacity: 0.2;
+      object-fit: contain;  /* ← FIXED: Shows entire image without cropping */
+      opacity: 0.15;
       z-index: 1;
       pointer-events: none;
     }
@@ -194,7 +193,7 @@
       z-index: 2;
     }
     
-    /* All hero text is now WHITE for maximum contrast */
+    /* All hero text is WHITE for maximum contrast */
     .hero h1 {
       color: #ffffff !important;
       text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -310,16 +309,15 @@
         width: 10px;
         height: 10px;
       }
-      .hero-children-overlay {
-        width: 100%;
-        opacity: 0.12;
-      }
       .hero {
         min-height: 70vh;
         padding: 4rem 1.5rem 2.5rem;
       }
       .hero h1 {
         font-size: clamp(1.6rem, 5vw, 2.4rem) !important;
+      }
+      .hero-children-overlay {
+        opacity: 0.1;
       }
     }
     
@@ -376,7 +374,7 @@
 
 <button class="wa" onclick="window.open('https://wa.me/265999089074','_blank')">💬</button>
 
-<!-- ===== FIXED HERO SECTION ===== -->
+<!-- ===== HERO SECTION WITH CONTAIN FIX ===== -->
 <section class="hero">
   <!-- Full background image -->
   <img src="images/hero-bg.jpg" alt="Background" class="hero-bg-image" onerror="this.style.display='none'">
@@ -384,7 +382,7 @@
   <!-- Dark overlay for contrast -->
   <div class="hero-overlay"></div>
   
-  <!-- Children image overlay - full height -->
+  <!-- Children image overlay - NOW using 'contain' to show full image -->
   <img src="images/crowd-children.jpeg" alt="Children" class="hero-children-overlay" onerror="this.style.display='none'">
   
   <div class="hbg">✟</div>
