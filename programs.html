@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate · Word & Life Ministry</title>
+  <title>Programs | Word & Life Empowerment Ministry</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <style>
+    /* keep all original styles – only donation modal behaviour changed */
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Inter',sans-serif; background:#fcf9f5; color:#1e1e2a; }
     :root {
@@ -17,7 +19,6 @@
       --shadow: 0 12px 30px rgba(0,0,0,0.04);
     }
     .w { max-width:1240px; margin:0 auto; padding:0 1.5rem; }
-    /* NAV */
     #nav { background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.02); position:sticky; top:0; z-index:100; padding:0.5rem 0; border-bottom:1px solid rgba(0,0,0,0.02); }
     .nw { display:flex; align-items:center; justify-content:space-between; max-width:1240px; margin:0 auto; padding:0 1.5rem; }
     .logo { display:flex; align-items:center; gap:0.5rem; cursor:pointer; }
@@ -37,7 +38,6 @@
     .mm a { text-decoration:none; color:var(--B); font-weight:500; font-size:0.9rem; padding:0.3rem 0; border-bottom:1px solid #f0f0f0; }
     .wa { position:fixed; bottom:24px; right:24px; background:#25D366; border:none; color:#fff; width:54px; height:54px; border-radius:50%; font-size:28px; box-shadow:0 4px 16px rgba(37,211,102,0.3); cursor:pointer; z-index:99; transition:0.2s; display:flex; align-items:center; justify-content:center; }
     .wa:hover { transform:scale(1.03); }
-    /* page header */
     .ph { background:var(--B); color:#fff; padding:2.5rem 1.5rem 2rem; text-align:center; }
     .ph h1 { font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:900; letter-spacing:-0.5px; margin:0.2rem 0 0.2rem; }
     .ph p { opacity:0.7; font-size:0.9rem; max-width:500px; margin:0 auto; }
@@ -62,7 +62,6 @@
     .btn.bG:hover { background:#1f5438; }
     .btn.bB { background:var(--B); }
     .btn.bB:hover { background:#121c28; }
-    /* footer */
     footer { background:var(--B); color:rgba(255,255,255,0.8); padding:2.5rem 0 1rem; margin-top:1rem; }
     .fg3 { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:2rem; }
     .ff p { font-size:0.78rem; opacity:0.6; margin:0.5rem 0 0.8rem; max-width:300px; }
@@ -78,7 +77,6 @@
     .bv cite { opacity:0.6; }
     .fd { border:0; border-top:1px solid rgba(255,255,255,0.05); margin:1rem 0; }
     .fb4 { display:flex; justify-content:space-between; font-size:0.6rem; opacity:0.3; }
-    /* modal */
     .mb { position:fixed; inset:0; background:rgba(0,0,0,0.25); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; z-index:999; opacity:0; pointer-events:none; transition:0.2s; }
     .mb.on { opacity:1; pointer-events:auto; }
     .md { background:#fff; max-width:440px; width:94%; border-radius:28px; padding:1.8rem 1.8rem 2rem; box-shadow:0 30px 60px rgba(0,0,0,0.1); position:relative; }
@@ -110,7 +108,7 @@
 <nav id="nav">
   <div class="nw">
     <div class="logo" onclick="location.href='index.html'">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='18' fill='%232c6e49'/%3E%3Ctext x='18' y='24' text-anchor='middle' font-size='18' fill='white' font-family='Inter' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='18' fill='%232c6e49'/%3E%3Ctext x='18' y='24' text-anchor='middle' font-size='18' fill='white' font-family='Inter' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img" onerror="this.src='https://placehold.co/36x36?text=W'">
       <div class="lt"><div class="n">Word &amp; Life Ministry</div><div class="s">Empowering Children &amp; Youth</div></div>
     </div>
     <ul class="nl">
@@ -193,7 +191,7 @@
     <div class="fg3">
       <div class="ff">
         <div class="logo">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='18' fill='%232c6e49'/%3E%3Ctext x='18' y='24' text-anchor='middle' font-size='18' fill='white' font-family='Inter' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img-small">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='18' fill='%232c6e49'/%3E%3Ctext x='18' y='24' text-anchor='middle' font-size='18' fill='white' font-family='Inter' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img-small" onerror="this.src='https://placehold.co/36x36?text=W'">
           <div class="lt"><div class="n">Word &amp; Life Ministry</div><div class="s">Empowering Children &amp; Youth</div></div>
         </div>
         <p>A Christian ministry transforming children and youth in Malawi.</p>
@@ -205,14 +203,14 @@
       </div>
       <div class="fc"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="training.html">Training</a></li><li><a href="impact.html">Impact</a></li><li><a href="newsletter.html">Newsletter</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div class="fc"><h4>Programs</h4><ul><li><a href="programs.html">Youth Mentorship</a></li><li><a href="programs.html">Teacher Training</a></li><li><a href="programs.html">Bible Study</a></li><li><a href="programs.html">Trauma Healing</a></li><li><a href="programs.html">Life Skills</a></li></ul></div>
-      <div class="fc fnl"><h4>Newsletter</h4><p style="font-size:0.78rem;margin-bottom:0.75rem;opacity:0.55">Get monthly updates.</p><input type="email" id="sub2" placeholder="Your email"><button class="btn bG" style="width:100%;justify-content:center;font-size:0.78rem" onclick="doSub('sub2')">Subscribe</button><div style="margin-top:1rem;font-size:0.77rem;opacity:0.48;line-height:1.9"><div>📞 <a href="tel:+265999089074" style="color:rgba(255,255,255,0.5);text-decoration:none">+265 999 089 074</a></div><div>✉️ <a href="mailto:masilikali@gmail.com" style="color:rgba(255,255,255,0.5);text-decoration:none">masilikali@gmail.com</a></div></div></div>
+      <div class="fc fnl"><h4>Newsletter</h4><p style="font-size:0.78rem;margin-bottom:0.75rem;opacity:0.55">Get monthly updates.</p><input type="email" id="sub2" placeholder="Your email"><button class="btn bG" style="width:100%;justify-content:center;font-size:0.78rem" onclick="doSub('sub2')">Subscribe</button><div style="margin-top:1rem;font-size:0.77rem;opacity:0.48;line-height:1.9"><div>📞 <a href="tel:+265999089074">+265 999 089 074</a></div><div>✉️ <a href="mailto:masilikali@gmail.com">masilikali@gmail.com</a></div></div></div>
     </div>
     <div class="bv">"Train up a child in the way he should go..."<cite>— Proverbs 22:6</cite></div>
     <hr class="fd"><div class="fb4"><p>© 2025 Word &amp; Life Empowerment Ministry. All rights reserved.</p><p>Made for God's Kingdom · Lilongwe, Malawi</p></div>
   </div>
 </footer>
 
-<!-- DONATION MODAL (WhatsApp redirect) -->
+<!-- DONATION MODAL – only the donation action changed to WhatsApp pre-filled -->
 <div class="mb" id="dm">
   <div class="md">
     <button class="mc" onclick="document.getElementById('dm').classList.remove('on')">✕</button>
@@ -237,7 +235,6 @@
       <label>Phone / M-Pesa</label>
       <input type="tel" id="donorPhone" placeholder="+265 ..." value="+265886903844">
     </div>
-    <!-- hidden amount field -->
     <input type="hidden" id="selectedAmount" value="1000">
     <button class="btn bB" style="width:100%;justify-content:center" id="donateWhatsAppBtn">
       Donate Now
@@ -246,7 +243,7 @@
 </div>
 
 <script>
-  // ---- helpers ----
+  // ---- keep all existing functions, only override donation action ----
   function toggleM() {
     document.getElementById('mm').classList.toggle('show');
   }
@@ -259,7 +256,7 @@
     else alert('Please enter your email.');
   }
 
-  // amount selection
+  // amount selection (unchanged)
   function selA(btn) {
     document.querySelectorAll('.am').forEach(b => b.classList.remove('sel'));
     btn.classList.add('sel');
@@ -269,7 +266,6 @@
       if (custom && !isNaN(custom) && Number(custom)>0) {
         document.getElementById('selectedAmount').value = custom;
       } else {
-        // fallback to first selected
         const first = document.querySelector('.am.sel');
         if (first) document.getElementById('selectedAmount').value = first.dataset.amount;
         else document.getElementById('selectedAmount').value = '1000';
@@ -279,23 +275,19 @@
     }
   }
 
-  // WhatsApp donation redirect with pre-filled message
+  // NEW: WhatsApp redirect with pre-filled message (replaces alert)
   document.getElementById('donateWhatsAppBtn').addEventListener('click', function(e) {
     e.preventDefault();
-    // get values
     const name = document.getElementById('donorName').value.trim() || 'a supporter';
     const phone = document.getElementById('donorPhone').value.trim() || '+265';
     let amount = document.getElementById('selectedAmount').value;
-    // if amount is custom but empty, fallback
     if (!amount || amount === 'custom') amount = '1000';
-    // format message
+    // pre-filled message for Pastor Paul
     const msg = `Hello Pastor Paul, I want to donate ${amount} MWK as a donation. My name is ${name}. Please send payment details to complete. Thank you!`;
     const encoded = encodeURIComponent(msg);
-    // whatsapp number (Pastor Paul)
     const waNumber = '265999089074';
     const url = `https://wa.me/${waNumber}?text=${encoded}`;
     window.open(url, '_blank');
-    // close modal
     document.getElementById('dm').classList.remove('on');
   });
 
