@@ -6,109 +6,13 @@
   <title>Programs | Word & Life Empowerment Ministry</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* keep all original styles – only donation modal behaviour changed */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Inter',sans-serif; background:#fcf9f5; color:#1e1e2a; }
-    :root {
-      --G: #2c6e49;
-      --G2: #4c9f70;
-      --B: #1e2b3c;
-      --M: #6b7a8f;
-      --card: #ffffff;
-      --shadow: 0 12px 30px rgba(0,0,0,0.04);
-    }
-    .w { max-width:1240px; margin:0 auto; padding:0 1.5rem; }
-    #nav { background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.02); position:sticky; top:0; z-index:100; padding:0.5rem 0; border-bottom:1px solid rgba(0,0,0,0.02); }
-    .nw { display:flex; align-items:center; justify-content:space-between; max-width:1240px; margin:0 auto; padding:0 1.5rem; }
-    .logo { display:flex; align-items:center; gap:0.5rem; cursor:pointer; }
-    .logo-img { width:36px; height:36px; border-radius:50%; object-fit:cover; background:#e9f0e6; }
-    .logo-img-small { width:32px; height:32px; border-radius:50%; object-fit:cover; background:#e9f0e6; }
-    .lt .n { font-weight:700; font-size:1rem; color:var(--B); letter-spacing:-0.3px; }
-    .lt .s { font-size:0.6rem; color:var(--M); letter-spacing:0.2px; text-transform:uppercase; }
-    .nl { display:flex; gap:1.2rem; list-style:none; font-size:0.8rem; font-weight:500; }
-    .nl a { text-decoration:none; color:var(--B); opacity:0.7; transition:0.2s; }
-    .nl a:hover, .nl a.active { opacity:1; color:var(--G); }
-    .nr { display:flex; align-items:center; gap:0.6rem; }
-    .dn { background:var(--G); border:none; color:#fff; padding:0.4rem 1rem; border-radius:40px; font-weight:600; font-size:0.75rem; cursor:pointer; transition:0.2s; }
-    .dn:hover { background:#1f5438; }
-    .hb { display:none; flex-direction:column; gap:4px; background:transparent; border:none; cursor:pointer; padding:6px; }
-    .hb span { width:24px; height:2px; background:var(--B); border-radius:4px; }
-    .mm { display:none; background:#fff; padding:1rem 1.5rem; border-top:1px solid #eee; flex-direction:column; gap:0.6rem; }
-    .mm a { text-decoration:none; color:var(--B); font-weight:500; font-size:0.9rem; padding:0.3rem 0; border-bottom:1px solid #f0f0f0; }
-    .wa { position:fixed; bottom:24px; right:24px; background:#25D366; border:none; color:#fff; width:54px; height:54px; border-radius:50%; font-size:28px; box-shadow:0 4px 16px rgba(37,211,102,0.3); cursor:pointer; z-index:99; transition:0.2s; display:flex; align-items:center; justify-content:center; }
-    .wa:hover { transform:scale(1.03); }
-    .ph { background:var(--B); color:#fff; padding:2.5rem 1.5rem 2rem; text-align:center; }
-    .ph h1 { font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:900; letter-spacing:-0.5px; margin:0.2rem 0 0.2rem; }
-    .ph p { opacity:0.7; font-size:0.9rem; max-width:500px; margin:0 auto; }
-    .chip { display:inline-block; background:rgba(255,255,255,0.08); padding:0.2rem 1rem; border-radius:30px; font-size:0.7rem; letter-spacing:0.5px; text-transform:uppercase; }
-    .cr { background:#f5f2ed; padding:0.5rem 1.5rem; font-size:0.7rem; color:var(--M); border-bottom:1px solid #eee; }
-    .cr span { color:var(--B); }
-    .sec { padding:2.5rem 0 3rem; }
-    .pg { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1.5rem; }
-    .card { background:#fff; border-radius:18px; padding:1.5rem 1.2rem; box-shadow:var(--shadow); border:1px solid rgba(0,0,0,0.02); transition:0.15s; }
-    .card:hover { transform:translateY(-4px); box-shadow:0 20px 35px rgba(0,0,0,0.03); }
-    .pi { font-size:2.2rem; margin-bottom:0.5rem; }
-    .pc h3 { font-size:1rem; font-weight:700; color:var(--B); margin:0 0 0.3rem; }
-    .pc p { font-size:0.78rem; color:var(--M); line-height:1.6; margin-bottom:0.8rem; }
-    .ptags { display:flex; flex-wrap:wrap; gap:0.3rem; }
-    .pt { background:#eef5f0; color:var(--G); padding:0.1rem 0.7rem; border-radius:30px; font-size:0.6rem; font-weight:600; letter-spacing:0.2px; }
-    .rv { transition:0.2s; }
-    .d1 { border-left:3px solid #b8d9c1; }
-    .d2 { border-left:3px solid #d4c9b0; }
-    .d3 { border-left:3px solid #b5c9d9; }
-    .btn { display:inline-flex; align-items:center; gap:0.4rem; background:var(--B); color:#fff; border:none; padding:0.5rem 1.2rem; border-radius:50px; font-weight:600; font-size:0.75rem; cursor:pointer; transition:0.15s; }
-    .btn.bG { background:var(--G); }
-    .btn.bG:hover { background:#1f5438; }
-    .btn.bB { background:var(--B); }
-    .btn.bB:hover { background:#121c28; }
-    footer { background:var(--B); color:rgba(255,255,255,0.8); padding:2.5rem 0 1rem; margin-top:1rem; }
-    .fg3 { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:2rem; }
-    .ff p { font-size:0.78rem; opacity:0.6; margin:0.5rem 0 0.8rem; max-width:300px; }
-    .fc h4 { font-size:0.8rem; color:#fff; margin-bottom:0.6rem; font-weight:600; }
-    .fc ul { list-style:none; font-size:0.75rem; line-height:2; }
-    .fc a { color:rgba(255,255,255,0.5); text-decoration:none; }
-    .fc a:hover { color:#fff; }
-    .fnl input { width:100%; padding:0.5rem 0.8rem; border-radius:40px; border:none; background:rgba(255,255,255,0.08); color:#fff; font-size:0.7rem; margin-bottom:0.6rem; }
-    .fnl input::placeholder { color:rgba(255,255,255,0.3); }
-    .soc { display:flex; gap:0.4rem; margin-top:0.8rem; }
-    .sb3 { background:rgba(255,255,255,0.04); border:none; border-radius:50%; color:rgba(255,255,255,0.4); font-size:0.9rem; cursor:pointer; width:32px; height:32px; display:flex; align-items:center; justify-content:center; }
-    .bv { margin:1.5rem 0 0.8rem; font-style:italic; opacity:0.5; font-size:0.8rem; text-align:center; }
-    .bv cite { opacity:0.6; }
-    .fd { border:0; border-top:1px solid rgba(255,255,255,0.05); margin:1rem 0; }
-    .fb4 { display:flex; justify-content:space-between; font-size:0.6rem; opacity:0.3; }
-    .mb { position:fixed; inset:0; background:rgba(0,0,0,0.25); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; z-index:999; opacity:0; pointer-events:none; transition:0.2s; }
-    .mb.on { opacity:1; pointer-events:auto; }
-    .md { background:#fff; max-width:440px; width:94%; border-radius:28px; padding:1.8rem 1.8rem 2rem; box-shadow:0 30px 60px rgba(0,0,0,0.1); position:relative; }
-    .mc { position:absolute; right:1rem; top:0.8rem; background:transparent; border:none; font-size:1.1rem; opacity:0.3; cursor:pointer; }
-    .ag { display:flex; flex-wrap:wrap; gap:0.4rem; margin:0.8rem 0 1.2rem; justify-content:center; }
-    .am { background:#f3f6fa; border:1px solid #e6edf4; padding:0.3rem 0.8rem; border-radius:50px; font-size:0.7rem; font-weight:500; color:var(--B); cursor:pointer; transition:0.1s; }
-    .am.sel, .am:hover { background:var(--G); color:#fff; border-color:var(--G); }
-    .fg { margin-bottom:0.8rem; }
-    .fg label { font-size:0.7rem; font-weight:600; color:var(--M); display:block; margin-bottom:0.2rem; }
-    .fg input { width:100%; padding:0.6rem 0.9rem; border-radius:40px; border:1px solid #e6edf4; font-size:0.8rem; background:#fafcfe; }
-    .fg input:focus { outline:2px solid var(--G2); border-color:transparent; }
-    @media (max-width:760px) {
-      .nl { display:none; }
-      .hb { display:flex; }
-      .mm.show { display:flex; }
-      .fg3 { grid-template-columns:1fr 1fr; }
-      .fnl { grid-column:1/-1; }
-      .ph h1 { font-size:1.8rem; }
-      .pg { grid-template-columns:1fr 1fr; }
-    }
-    @media (max-width:480px) {
-      .pg { grid-template-columns:1fr; }
-      .fg3 { grid-template-columns:1fr; }
-    }
-  </style>
 </head>
 <body>
 
 <nav id="nav">
   <div class="nw">
     <div class="logo" onclick="location.href='index.html'">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='18' fill='%232c6e49'/%3E%3Ctext x='18' y='24' text-anchor='middle' font-size='18' fill='white' font-family='Inter' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img" onerror="this.src='https://placehold.co/36x36?text=W'">
+      <img src="images/logo.png" alt="Logo" class="logo-img" onerror="this.src='https://placehold.co/36x36?text=W'">
       <div class="lt"><div class="n">Word &amp; Life Ministry</div><div class="s">Empowering Children &amp; Youth</div></div>
     </div>
     <ul class="nl">
@@ -191,7 +95,7 @@
     <div class="fg3">
       <div class="ff">
         <div class="logo">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='18' fill='%232c6e49'/%3E%3Ctext x='18' y='24' text-anchor='middle' font-size='18' fill='white' font-family='Inter' font-weight='700'%3EW%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img-small" onerror="this.src='https://placehold.co/36x36?text=W'">
+          <img src="images/logo.png" alt="Logo" class="logo-img-small" onerror="this.src='https://placehold.co/36x36?text=W'">
           <div class="lt"><div class="n">Word &amp; Life Ministry</div><div class="s">Empowering Children &amp; Youth</div></div>
         </div>
         <p>A Christian ministry transforming children and youth in Malawi.</p>
@@ -210,93 +114,8 @@
   </div>
 </footer>
 
-<!-- DONATION MODAL – only the donation action changed to WhatsApp pre-filled -->
-<div class="mb" id="dm">
-  <div class="md">
-    <button class="mc" onclick="document.getElementById('dm').classList.remove('on')">✕</button>
-    <div style="text-align:center;margin-bottom:1.25rem">
-      <div style="font-size:2rem;margin-bottom:0.3rem">🙏</div>
-      <h2 style="color:var(--B);font-size:1.3rem;margin-bottom:0.25rem">Support the Ministry</h2>
-      <p style="color:var(--M);font-size:0.82rem">Empowering children through God's Word</p>
-    </div>
-    <div class="ag" id="amountGroup">
-      <button class="am" data-amount="500" onclick="selA(this)">MWK 500</button>
-      <button class="am sel" data-amount="1000" onclick="selA(this)">MWK 1,000</button>
-      <button class="am" data-amount="2500" onclick="selA(this)">MWK 2,500</button>
-      <button class="am" data-amount="5000" onclick="selA(this)">MWK 5,000</button>
-      <button class="am" data-amount="10000" onclick="selA(this)">MWK 10,000</button>
-      <button class="am" data-amount="custom" onclick="selA(this)">Custom</button>
-    </div>
-    <div class="fg">
-      <label>Your Name</label>
-      <input type="text" id="donorName" placeholder="Full name" value="grant">
-    </div>
-    <div class="fg">
-      <label>Phone / M-Pesa</label>
-      <input type="tel" id="donorPhone" placeholder="+265 ..." value="+265886903844">
-    </div>
-    <input type="hidden" id="selectedAmount" value="1000">
-    <button class="btn bB" style="width:100%;justify-content:center" id="donateWhatsAppBtn">
-      Donate Now
-    </button>
-  </div>
-</div>
+<div class="mb" id="dm"><div class="md"><button class="mc" onclick="document.getElementById('dm').classList.remove('on')">✕</button><div style="text-align:center;margin-bottom:1.25rem"><div style="font-size:2rem;margin-bottom:0.3rem">🙏</div><h2 style="color:var(--B);font-size:1.3rem;margin-bottom:0.25rem">Support the Ministry</h2><p style="color:var(--M);font-size:0.82rem">Empowering children through God's Word</p></div><div class="ag"><button class="am" onclick="selA(this)">MWK 500</button><button class="am sel" onclick="selA(this)">MWK 1,000</button><button class="am" onclick="selA(this)">MWK 2,500</button><button class="am" onclick="selA(this)">MWK 5,000</button><button class="am" onclick="selA(this)">MWK 10,000</button><button class="am" onclick="selA(this)">Custom</button></div><div class="fg"><label>Your Name</label><input type="text" placeholder="Full name"></div><div class="fg"><label>Phone / M-Pesa</label><input type="tel" placeholder="+265 ..."></div><button class="btn bB" style="width:100%;justify-content:center" onclick="document.getElementById('dm').classList.remove('on');alert('Thank you! 🙏\nContact Pastor Paul to complete:\n+265 999 089 074\n\nGod bless you!')">Donate Now</button></div></div>
 
-<script>
-  // ---- keep all existing functions, only override donation action ----
-  function toggleM() {
-    document.getElementById('mm').classList.toggle('show');
-  }
-  function openD() {
-    document.getElementById('dm').classList.add('on');
-  }
-  function doSub(id) {
-    const el = document.getElementById(id);
-    if (el && el.value) alert('📬 Thanks! You\'ll receive monthly updates.');
-    else alert('Please enter your email.');
-  }
-
-  // amount selection (unchanged)
-  function selA(btn) {
-    document.querySelectorAll('.am').forEach(b => b.classList.remove('sel'));
-    btn.classList.add('sel');
-    let val = btn.dataset.amount;
-    if (val === 'custom') {
-      const custom = prompt('Enter amount in MWK (e.g. 750):');
-      if (custom && !isNaN(custom) && Number(custom)>0) {
-        document.getElementById('selectedAmount').value = custom;
-      } else {
-        const first = document.querySelector('.am.sel');
-        if (first) document.getElementById('selectedAmount').value = first.dataset.amount;
-        else document.getElementById('selectedAmount').value = '1000';
-      }
-    } else {
-      document.getElementById('selectedAmount').value = val;
-    }
-  }
-
-  // NEW: WhatsApp redirect with pre-filled message (replaces alert)
-  document.getElementById('donateWhatsAppBtn').addEventListener('click', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('donorName').value.trim() || 'a supporter';
-    const phone = document.getElementById('donorPhone').value.trim() || '+265';
-    let amount = document.getElementById('selectedAmount').value;
-    if (!amount || amount === 'custom') amount = '1000';
-    // pre-filled message for Pastor Paul
-    const msg = `Hello Pastor Paul, I want to donate ${amount} MWK as a donation. My name is ${name}. Please send payment details to complete. Thank you!`;
-    const encoded = encodeURIComponent(msg);
-    const waNumber = '265999089074';
-    const url = `https://wa.me/${waNumber}?text=${encoded}`;
-    window.open(url, '_blank');
-    document.getElementById('dm').classList.remove('on');
-  });
-
-  // set default selected amount on load
-  window.addEventListener('DOMContentLoaded', function() {
-    const def = document.querySelector('.am.sel');
-    if (def) document.getElementById('selectedAmount').value = def.dataset.amount;
-  });
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
