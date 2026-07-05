@@ -10,6 +10,7 @@
     /* Founder section styles */
     .founder-section {
       padding: 3rem 0;
+      background: var(--OFF);
     }
     
     .founder-card {
@@ -23,13 +24,35 @@
       border: 1px solid var(--BOR);
     }
     
-    .founder-image {
+    .founder-image-wrapper {
       flex-shrink: 0;
+      position: relative;
+    }
+    
+    .founder-image {
       width: 280px;
-      height: 320px;
+      height: 340px;
       border-radius: var(--R);
       object-fit: cover;
-      box-shadow: 0 8px 28px rgba(12, 52, 96, 0.15);
+      box-shadow: 0 8px 28px rgba(12, 52, 96, 0.2);
+      border: 4px solid var(--G2);
+    }
+    
+    .founder-image-badge {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--G2);
+      color: var(--B);
+      padding: 0.3rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(200, 150, 12, 0.3);
     }
     
     .founder-content {
@@ -40,18 +63,29 @@
       margin-bottom: 0.5rem;
     }
     
-    .founder-content h2 {
+    .founder-content .founder-name {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
       color: var(--B);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.1rem;
+    }
+    
+    .founder-content .founder-name span {
+      color: var(--G2);
     }
     
     .founder-content .founder-title {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--G);
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.1rem;
+    }
+    
+    .founder-content .founder-subtitle {
+      font-size: 0.85rem;
+      color: var(--M);
+      margin-bottom: 1rem;
+      font-style: italic;
     }
     
     .founder-content p {
@@ -64,10 +98,56 @@
     .founder-content .founder-quote {
       font-style: italic;
       color: var(--B);
-      font-size: 0.95rem;
-      padding-left: 1.5rem;
-      border-left: 3px solid var(--G2);
+      font-size: 1rem;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--G2);
       margin-top: 0.5rem;
+      background: rgba(200, 150, 12, 0.06);
+      border-radius: 0 var(--R) var(--R) 0;
+    }
+    
+    .founder-content .founder-quote::before {
+      content: '"';
+      font-size: 2rem;
+      color: var(--G2);
+      font-family: 'Playfair Display', serif;
+      line-height: 0.5;
+      margin-right: 0.2rem;
+    }
+    
+    .founder-content .founder-quote::after {
+      content: '"';
+      font-size: 2rem;
+      color: var(--G2);
+      font-family: 'Playfair Display', serif;
+      line-height: 0.5;
+      margin-left: 0.2rem;
+    }
+    
+    .founder-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .founder-stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .founder-stat .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--G2);
+    }
+    
+    .founder-stat .label {
+      font-size: 0.75rem;
+      color: var(--M);
+      font-weight: 600;
     }
     
     /* Responsive */
@@ -75,30 +155,70 @@
       .founder-card {
         flex-direction: column;
         text-align: center;
-        padding: 1.5rem;
+        padding: 1.8rem;
+        gap: 1.5rem;
       }
       
       .founder-image {
-        width: 200px;
-        height: 240px;
+        width: 220px;
+        height: 270px;
       }
       
       .founder-content .founder-quote {
-        padding-left: 0;
+        padding: 0.8rem 1rem;
         border-left: none;
-        border-top: 3px solid var(--G2);
-        padding-top: 0.75rem;
+        border-top: 4px solid var(--G2);
+        border-radius: var(--R) var(--R) 0 0;
+        text-align: left;
+      }
+      
+      .founder-content .founder-quote::before,
+      .founder-content .founder-quote::after {
+        font-size: 1.5rem;
+      }
+      
+      .founder-stats {
+        justify-content: center;
+      }
+      
+      .founder-image-badge {
+        font-size: 0.55rem;
+        padding: 0.2rem 0.8rem;
+        bottom: -8px;
       }
     }
     
     @media (max-width: 480px) {
-      .founder-image {
-        width: 160px;
-        height: 200px;
-      }
-      
       .founder-card {
         padding: 1.2rem;
+      }
+      
+      .founder-image {
+        width: 180px;
+        height: 220px;
+      }
+      
+      .founder-stats {
+        gap: 0.8rem;
+      }
+      
+      .founder-stat .num {
+        font-size: 1rem;
+      }
+      
+      .founder-stat .label {
+        font-size: 0.65rem;
+      }
+      
+      .founder-content .founder-quote {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+      }
+      
+      .founder-image-badge {
+        font-size: 0.5rem;
+        padding: 0.15rem 0.6rem;
+        bottom: -6px;
       }
     }
   </style>
@@ -182,28 +302,51 @@
   </div>
 </section>
 
-<!-- ===== NEW: FOUNDER / LEADERSHIP SECTION ===== -->
+<!-- ===== FOUNDER / LEADERSHIP SECTION ===== -->
 <section class="sec founder-section">
   <div class="w">
     <div class="tc rv" style="margin-bottom:2rem">
       <div class="chip">Our Leadership</div>
       <h2 class="h2">Meet Our <b>Founder</b></h2>
       <div class="ln c"></div>
+      <p class="p" style="margin:0 auto; max-width:500px;">A visionary leader dedicated to transforming the lives of children and youth through God's Word.</p>
     </div>
     
     <div class="founder-card rv">
       <!-- Founder Image -->
-      <img src="images/founder.png" alt="Founder - Pastor Paul Masilikali" class="founder-image" onerror="this.src='https://placehold.co/280x320/0C3460/FFFFFF?text=Founder'">
+      <div class="founder-image-wrapper">
+        <img src="images/founder.jpeg" alt="Founder - Pastor Paul Masilikali" class="founder-image" onerror="this.src='https://placehold.co/280x340/0C3460/FFFFFF?text=Pastor+Paul'">
+        <div class="founder-image-badge">✦ Founder</div>
+      </div>
       
       <!-- Founder Content -->
       <div class="founder-content">
         <div class="chip">Founder &amp; Director</div>
-        <h2>Pastor Paul Masilikali</h2>
+        <h2 class="founder-name">Pastor <span>Paul Masilikali</span></h2>
         <div class="founder-title">Word &amp; Life Empowerment Ministry</div>
+        <div class="founder-subtitle">A servant leader with a passion for the next generation</div>
+        
         <p>Pastor Paul Masilikali is the visionary founder of Word &amp; Life Empowerment Ministry. With a deep passion for children and youth, he has dedicated his life to reaching the most vulnerable communities in Malawi with the transformative power of God's Word.</p>
-        <p>Through his leadership, the ministry has grown to reach over 2,000 children, trained hundreds of teachers, and established Bible study groups across multiple communities.</p>
+        <p>Through his leadership, the ministry has grown to reach thousands of children, trained hundreds of pastors and teachers, and established Bible study groups across multiple communities.</p>
+        
         <div class="founder-quote">
-          "Every child is a gift from God, and it is our responsibility to nurture them in faith, equip them with skills, and empower them to become leaders who will transform their communities."
+          Every child is a gift from God, and it is our responsibility to nurture them in faith, equip them with skills, and empower them to become leaders who will transform their communities.
+        </div>
+        
+        <!-- Mini Stats -->
+        <div class="founder-stats">
+          <div class="founder-stat">
+            <span class="num">20+</span>
+            <span class="label">Years of Ministry</span>
+          </div>
+          <div class="founder-stat">
+            <span class="num">2000+</span>
+            <span class="label">Children Reached</span>
+          </div>
+          <div class="founder-stat">
+            <span class="num">250+</span>
+            <span class="label">Leaders Trained</span>
+          </div>
         </div>
       </div>
     </div>
