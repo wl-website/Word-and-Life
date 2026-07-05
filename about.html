@@ -6,6 +6,102 @@
   <title>About Us | Word & Life Empowerment Ministry</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Founder section styles */
+    .founder-section {
+      padding: 3rem 0;
+    }
+    
+    .founder-card {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      background: #fff;
+      border-radius: var(--R);
+      padding: 2.5rem;
+      box-shadow: 0 8px 30px rgba(12, 52, 96, 0.1);
+      border: 1px solid var(--BOR);
+    }
+    
+    .founder-image {
+      flex-shrink: 0;
+      width: 280px;
+      height: 320px;
+      border-radius: var(--R);
+      object-fit: cover;
+      box-shadow: 0 8px 28px rgba(12, 52, 96, 0.15);
+    }
+    
+    .founder-content {
+      flex: 1;
+    }
+    
+    .founder-content .chip {
+      margin-bottom: 0.5rem;
+    }
+    
+    .founder-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: var(--B);
+      margin-bottom: 0.3rem;
+    }
+    
+    .founder-content .founder-title {
+      font-size: 0.9rem;
+      color: var(--G);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    .founder-content p {
+      color: var(--M);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+    
+    .founder-content .founder-quote {
+      font-style: italic;
+      color: var(--B);
+      font-size: 0.95rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--G2);
+      margin-top: 0.5rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .founder-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+      }
+      
+      .founder-image {
+        width: 200px;
+        height: 240px;
+      }
+      
+      .founder-content .founder-quote {
+        padding-left: 0;
+        border-left: none;
+        border-top: 3px solid var(--G2);
+        padding-top: 0.75rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .founder-image {
+        width: 160px;
+        height: 200px;
+      }
+      
+      .founder-card {
+        padding: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -48,6 +144,7 @@
 <div class="ph"><div class="chip w">Our Story</div><h1>About Us</h1><p>Committed to transforming children and youth through God's Word.</p></div>
 <div class="cr"><div class="w">Home / <span>About</span></div></div>
 
+<!-- SECTION 1: Who We Are -->
 <section class="sec">
   <div class="w">
     <div class="g2" style="align-items:center;gap:3rem">
@@ -65,6 +162,7 @@
   </div>
 </section>
 
+<!-- SECTION 2: Mission & Vision -->
 <section class="sec bg2">
   <div class="w">
     <div class="g2" style="gap:1.25rem">
@@ -84,6 +182,35 @@
   </div>
 </section>
 
+<!-- ===== NEW: FOUNDER / LEADERSHIP SECTION ===== -->
+<section class="sec founder-section">
+  <div class="w">
+    <div class="tc rv" style="margin-bottom:2rem">
+      <div class="chip">Our Leadership</div>
+      <h2 class="h2">Meet Our <b>Founder</b></h2>
+      <div class="ln c"></div>
+    </div>
+    
+    <div class="founder-card rv">
+      <!-- Founder Image -->
+      <img src="images/founder.jpeg" alt="Founder - Pastor Paul Masilikali" class="founder-image" onerror="this.src='https://placehold.co/280x320/0C3460/FFFFFF?text=Founder'">
+      
+      <!-- Founder Content -->
+      <div class="founder-content">
+        <div class="chip">Founder &amp; Director</div>
+        <h2>Pastor Paul Masilikali</h2>
+        <div class="founder-title">Word &amp; Life Empowerment Ministry</div>
+        <p>Pastor Paul Masilikali is the visionary founder of Word &amp; Life Empowerment Ministry. With a deep passion for children and youth, he has dedicated his life to reaching the most vulnerable communities in Malawi with the transformative power of God's Word.</p>
+        <p>Through his leadership, the ministry has grown to reach over 2,000 children, trained hundreds of pastors and teachers, and established Bible study groups across multiple communities.</p>
+        <div class="founder-quote">
+          "Every child is a gift from God, and it is our responsibility to nurture them in faith, equip them with skills, and empower them to become leaders who will transform their communities."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: Core Values -->
 <section class="sec">
   <div class="w">
     <div class="tc rv" style="margin-bottom:2rem">
