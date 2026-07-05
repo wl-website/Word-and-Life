@@ -1191,3 +1191,15 @@ footer {
   .gg { columns: 1; }
   .g4 { grid-template-columns: 1fr 1fr; }
 }
+/* ===== FIX: Page header spacing on mobile ===== */
+@media (max-width: 768px) {
+  .ph {
+    padding-top: 90px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ph {
+    padding-top: 80px !important;
+  }
+}
