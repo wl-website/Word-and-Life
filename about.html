@@ -38,23 +38,6 @@
       display: block;
     }
     
-    .founder-image-badge {
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--G2);
-      color: var(--B);
-      padding: 0.3rem 1.2rem;
-      border-radius: 50px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(200, 150, 12, 0.3);
-    }
-    
     .founder-content {
       flex: 1;
     }
@@ -124,32 +107,6 @@
       margin-left: 0.2rem;
     }
     
-    .founder-stats {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .founder-stat {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .founder-stat .num {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 900;
-      color: var(--G2);
-    }
-    
-    .founder-stat .label {
-      font-size: 0.75rem;
-      color: var(--M);
-      font-weight: 600;
-    }
-    
     /* Responsive */
     @media (max-width: 768px) {
       .founder-card {
@@ -176,16 +133,6 @@
       .founder-content .founder-quote::after {
         font-size: 1.5rem;
       }
-      
-      .founder-stats {
-        justify-content: center;
-      }
-      
-      .founder-image-badge {
-        font-size: 0.55rem;
-        padding: 0.2rem 0.8rem;
-        bottom: -8px;
-      }
     }
     
     @media (max-width: 480px) {
@@ -198,27 +145,9 @@
         height: 270px;
       }
       
-      .founder-stats {
-        gap: 0.8rem;
-      }
-      
-      .founder-stat .num {
-        font-size: 1rem;
-      }
-      
-      .founder-stat .label {
-        font-size: 0.65rem;
-      }
-      
       .founder-content .founder-quote {
         font-size: 0.85rem;
         padding: 0.6rem 0.8rem;
-      }
-      
-      .founder-image-badge {
-        font-size: 0.5rem;
-        padding: 0.15rem 0.6rem;
-        bottom: -6px;
       }
     }
   </style>
@@ -306,17 +235,14 @@
 <section class="sec founder-section">
   <div class="w">
     <div class="tc rv" style="margin-bottom:2rem">
-      <div class="chip">Our Leadership</div>
       <h2 class="h2">Meet Our <b>Founder</b></h2>
       <div class="ln c"></div>
-      <p class="p" style="margin:0 auto; max-width:500px;">A visionary leader dedicated to transforming the lives of children and youth through God's Word.</p>
     </div>
     
     <div class="founder-card rv">
-      <!-- Founder Image - NO FRAME, LARGER -->
+      <!-- Founder Image - NO BADGE -->
       <div class="founder-image-wrapper">
         <img src="images/founder.png" alt="Bishop Paul D. Masilikali - Founder" class="founder-image" onerror="this.src='https://placehold.co/300x360/0C3460/FFFFFF?text=Bishop+Paul'">
-        <div class="founder-image-badge">✦ Founder</div>
       </div>
       
       <!-- Founder Content -->
@@ -334,22 +260,6 @@
         
         <div class="founder-quote">
           Every child is a gift from God, and it is our responsibility to nurture them in faith, equip them with skills, and empower them to become leaders who will transform their communities.
-        </div>
-        
-        <!-- Mini Stats -->
-        <div class="founder-stats">
-          <div class="founder-stat">
-            <span class="num">2023</span>
-            <span class="label">Year Founded</span>
-          </div>
-          <div class="founder-stat">
-            <span class="num">2000+</span>
-            <span class="label">Children Reached</span>
-          </div>
-          <div class="founder-stat">
-            <span class="num">250+</span>
-            <span class="label">Leaders Trained</span>
-          </div>
         </div>
       </div>
     </div>
